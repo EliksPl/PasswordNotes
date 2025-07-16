@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.notes.NotesListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_notes_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="4dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+
+        tools:itemCount="4"
+        tools:listitem="@layout/item_note"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_notes_list_fab_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Add note"
+
+        app:layout_anchor="@+id/fragment_notes_list_rv"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin = "32dp"
+
+        android:src="@drawable/ic_add_24"
+        app:tint="?attr/colorOnPrimaryContainer"
+        app:backgroundTint="?attr/colorPrimaryContainer"/>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
